@@ -1,13 +1,18 @@
-import React from "react";
-import { ExternalLink, Github } from "lucide-react";
-
+import { LuExternalLink, LuGithub } from "react-icons/lu";
+import nageeb from "../assets/projects/nageeb.png";
+import nafea from "../assets/projects/nafea.png";
+import fatDuster from "../assets/projects/fatduster.png";
+import ecommerce from "../assets/projects/ecommerce_app.png";
+import forsan from "../assets/projects/forsan.png";
+import lavaloon from "../assets/projects/lavaloon.png";
+import tarkiba from "../assets/projects/tarkiba.png";
+import crmLanding from "../assets/projects/crm_landing.png";
 const projects = [
   {
     title: "Nageeb App",
     description:
       "A Laravel-based application for content management with intuitive navigation and modern tech integration.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+    image: nageeb,
     tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://nageebapp.com/en",
   },
@@ -15,8 +20,7 @@ const projects = [
     title: "Nafea Edu",
     description:
       "An educational platform built with modern technologies for interactive learning and dynamic content.",
-    image:
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80",
+    image: nafea,
     tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://nafea-edu.com/en",
   },
@@ -24,8 +28,7 @@ const projects = [
     title: "Fat Duster",
     description:
       "Task management app for efficient organization, offering a clean, modern design and secure performance.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+    image: fatDuster,
     tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://fatduster.com/en",
   },
@@ -33,8 +36,7 @@ const projects = [
     title: "Tarkiba",
     description:
       "E-commerce platform with modern UI and seamless user experience, optimized for all devices.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
+    image: tarkiba,
     tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://tarkiba.net/en",
   },
@@ -42,8 +44,7 @@ const projects = [
     title: "CRM V2 Landing",
     description:
       "Responsive CRM landing page with a clear layout and optimized for mobile and desktop users.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+    image: crmLanding,
     tags: ["HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://crm-v2-landing-page.vercel.app/",
   },
@@ -51,18 +52,17 @@ const projects = [
     title: "E-commerce App",
     description:
       "Firebase-powered e-commerce app with real-time updates, user authentication, and a responsive design.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
+    image: ecommerce,
     tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Node js"],
     liveUrl: "https://e-commerce-fc321.firebaseapp.com/index.html",
-    githubUrl: "https://github.com/mahmoud-wahba-dev/fullstack-purejs-shoppingcart-app",
+    githubUrl:
+      "https://github.com/mahmoud-wahba-dev/fullstack-purejs-shoppingcart-app",
   },
   {
     title: "Lavaloon Company",
     description:
       "A portfolio website showcasing Lavaloon’s services with smooth navigation and modern design.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
+    image: lavaloon,
     tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Frappe", "ERPNEXT"],
     liveUrl: "https://www.lavaloon.com/",
   },
@@ -70,13 +70,11 @@ const projects = [
     title: "Shabab Forsan Website",
     description:
       "A portfolio website for Shabab Forsan, featuring modern design, easy navigation, and real-time updates.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80",
+    image: forsan,
     tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Frappe", "ERPNEXT"],
     liveUrl: "https://shababforsan.org/",
   },
 ];
-
 
 export default function Projects() {
   return (
@@ -123,22 +121,20 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700"
                   >
-                    <ExternalLink size={20} className="mr-2" />
+                    <LuExternalLink size={20} className="mr-2" />
                     Live Demo
                   </a>
-               {
-                project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700"
-                  >
-                    <Github size={20} className="mr-2" />
-                    GitHub
-                  </a>
-                )
-               }
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700"
+                    >
+                      <LuGithub size={20} className="mr-2" />
+                      GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
