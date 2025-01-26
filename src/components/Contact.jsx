@@ -1,10 +1,21 @@
 import { useEffect, useState } from "react";
-import { LuGithub, LuLinkedin, LuMail, LuMapPin, LuPhone, LuSend } from "react-icons/lu";
+import {
+  LuGithub,
+  LuLinkedin,
+  LuMail,
+  LuMapPin,
+  LuPhone,
+  LuSend,
+} from "react-icons/lu";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
@@ -14,7 +25,7 @@ export default function Contact() {
     setIsSubmitting(true); // Show loader
 
     try {
-      const response = await fetch("https://formspree.io/f/xovjjqoe", {
+      const response = await fetch("qhttps://formspree.io/f/xovjjqoe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -64,8 +75,9 @@ export default function Contact() {
           <div>
             <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
             <p className="text-gray-600 mb-8">
-              I'm always interested in hearing about new projects and opportunities. Feel free to
-              reach out through the form or my social media.
+              I'm always interested in hearing about new projects and
+              opportunities. Feel free to reach out through the form or my
+              social media.
             </p>
 
             <div className="space-y-4">
@@ -111,7 +123,10 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Name
               </label>
               <input
@@ -126,7 +141,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email
               </label>
               <input
@@ -141,7 +159,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Message
               </label>
               <textarea
@@ -161,7 +182,8 @@ export default function Contact() {
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
             >
               {isSubmitting ? (
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                // <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                <div className="animate-spin h-5 w-5 bg-white"></div>
               ) : (
                 <>
                   <LuSend size={20} className="mr-2" />
