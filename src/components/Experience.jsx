@@ -66,28 +66,26 @@ export default function Experience() {
               <div className="bg-gray-50 rounded-lg p-6 ml-6 hover:shadow-lg transition-shadow">
                 <div className="flex justify-between items-start mb-4">
                   <div className="">
-                    <h3 className="text-xl font-bold">
-                      {exp.company}
-
-               
-                    </h3>
+                    <h3 className="text-xl font-bold">{exp.company}</h3>
                     <p className="text-blue-600 font-medium">{exp.position}</p>
                   </div>
-                  <div className="w-1/4 h-14">
-                        <img
-                          src={exp.logo}
-                          alt={exp.company}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
+
                   <span className="inline-flex items-center text-gray-600">
                     <LuCalendar size={16} className="mr-2" />
                     {exp.period}
                   </span>
                 </div>
 
-                <p className="text-gray-600 mb-4">{exp.description}</p>
-
+                <div className="flex justify-between">
+                  <p className="text-gray-600 mb-4">{exp.description}</p>
+                  <div className="w-1/4 h-14">
+                    <img
+                      src={exp.logo}
+                      alt={exp.company}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
                 <ul className="list-disc list-inside space-y-2 text-gray-600">
                   {exp.responsibilities.map((resp, respIndex) => (
                     <li key={respIndex}>{resp}</li>
