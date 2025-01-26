@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import logo from "../assets/logo_croped.png";
+import { LuMenu } from "react-icons/lu";
+import { VscChromeClose } from "react-icons/vsc";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -85,7 +86,7 @@ export default function Navigation() {
             className="md:hidden text-gray-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <VscChromeClose size={24} /> : <LuMenu size={24} />}
           </button>
         </div>
 
