@@ -48,7 +48,7 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold text-blue-600">
+          <a href="#home" className="text-2xl font-bold">
             {/* MW */}
             <img
               width={60}
@@ -71,8 +71,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   activeSection === item.href.substring(1)
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-blue-600" // Active section color
+                    : "text-gray-600 hover:text-blue-600" // Default and hover color
                 }`}
               >
                 {item.label}
@@ -98,7 +98,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-6 py-2 text-sm font-medium ${
                   activeSection === item.href.substring(1)
-                    ? "text-blue-600 bg-blue-50"
+                    ? "text-white bg-blue-600"
                     : "text-gray-600 hover:bg-gray-50"
                 }`}
                 onClick={() => setIsMenuOpen(false)}

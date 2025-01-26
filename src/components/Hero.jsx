@@ -86,9 +86,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
           <LuArrowDown size={24} />
-        </div>
+        </a>
       </div>
     </section>
   );

@@ -1,36 +1,25 @@
 import { useEffect, useState } from "react";
-import {
-  LuGithub,
-  LuLinkedin,
-  LuMail,
-  LuMapPin,
-  LuPhone,
-  LuSend,
-} from "react-icons/lu";
-import { motion, AnimatePresence } from "framer-motion"; // For animations
+import { LuGithub, LuLinkedin, LuMail, LuMapPin, LuPhone, LuSend } from "react-icons/lu";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Show loader
 
     try {
-      const response = await fetch("zhttps://formspree.io/f/xovjjqoe", {
+      const response = await fetch("https://formspree.io/f/xovjjqoe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" }); // Clear the form
@@ -40,32 +29,31 @@ export default function Contact() {
     } catch (error) {
       setStatus("An error occurred. Please try again.");
     } finally {
-      setIsSubmitting(true);
-
+      // Show loader for 700ms, then show dialog
       setTimeout(() => {
         setIsSubmitting(false);
-        setShowDialog(true); // Show the dialog after submission
-      }, 500);
+        setShowDialog(true);
+      }, 700);
     }
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const closeDialog = () => {
     setShowDialog(false);
   };
-    useEffect(() => {
-      if (showDialog) {
-        const timer = setTimeout(() => {
-          setShowDialog(false);
-        }, 3000); // Close the dialog after 3 seconds
-        return () => clearTimeout(timer);
-      }
-    }, [showDialog]);
+
+  // Auto-hide dialog after 3 seconds
+  useEffect(() => {
+    if (showDialog) {
+      const timer = setTimeout(() => {
+        setShowDialog(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showDialog]);
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -76,9 +64,8 @@ export default function Contact() {
           <div>
             <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
             <p className="text-gray-600 mb-8">
-              I'm always interested in hearing about new projects and
-              opportunities. Feel free to reach out through the form or my
-              social media.
+              I'm always interested in hearing about new projects and opportunities. Feel free to
+              reach out through the form or my social media.
             </p>
 
             <div className="space-y-4">
@@ -124,10 +111,7 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                 Name
               </label>
               <input
@@ -142,10 +126,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email
               </label>
               <input
@@ -160,10 +141,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                 Message
               </label>
               <textarea
@@ -187,26 +165,13 @@ export default function Contact() {
               ) : (
                 <>
                   <LuSend size={20} className="mr-2" />
-                  Send Message
+                  Send a Message to My Gmail
                 </>
               )}
             </button>
-            <div>
-              {status && (
-                <p
-                  className={`mt-4 text-sm text-center ${
-                    status.includes("successfully")
-                      ? "text-green-600"
-                      : "text-red-600"
-                  }`}
-                >
-                  {status}
-                </p>
-              )}
-            </div>
           </form>
 
-          {/* Modal */}
+          {/* Dialog */}
           <AnimatePresence>
             {showDialog && (
               <motion.div
@@ -220,11 +185,7 @@ export default function Contact() {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full"
                 >
                   <h2 className="text-xl font-bold mb-4 flex items-center">
