@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   LuGithub,
   LuLinkedin,
@@ -7,6 +7,8 @@ import {
   LuPhone,
   LuSend,
 } from "react-icons/lu";
+import { motion, AnimatePresence } from "framer-motion"; // For animations
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,19 +19,18 @@ export default function Contact() {
 
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://formspree.io/f/xovjjqoe", {
+      const response = await fetch("zhttps://formspree.io/f/xovjjqoe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
       if (response.ok) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" }); // Clear the form
@@ -39,8 +40,12 @@ export default function Contact() {
     } catch (error) {
       setStatus("An error occurred. Please try again.");
     } finally {
-      setIsSubmitting(false);
-      setShowModal(true); // Show the modal after submission
+      setIsSubmitting(true);
+
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setShowDialog(true); // Show the dialog after submission
+      }, 500);
     }
   };
 
@@ -50,10 +55,17 @@ export default function Contact() {
       [e.target.name]: e.target.value,
     });
   };
-
-  const closeModal = () => {
-    setShowModal(false);
+  const closeDialog = () => {
+    setShowDialog(false);
   };
+    useEffect(() => {
+      if (showDialog) {
+        const timer = setTimeout(() => {
+          setShowDialog(false);
+        }, 3000); // Close the dialog after 3 seconds
+        return () => clearTimeout(timer);
+      }
+    }, [showDialog]);
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -167,10 +179,17 @@ export default function Contact() {
 
             <button
               type="submit"
+              disabled={isSubmitting}
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
             >
-              <LuSend size={20} className="mr-2" />
-              Send Message
+              {isSubmitting ? (
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+              ) : (
+                <>
+                  <LuSend size={20} className="mr-2" />
+                  Send Message
+                </>
+              )}
             </button>
             <div>
               {status && (
@@ -188,28 +207,44 @@ export default function Contact() {
           </form>
 
           {/* Modal */}
-          {showModal && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-              <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-                <h2 className="text-xl font-bold mb-4">
-                  {status.includes("successfully") ? "Success!" : "Error"}
-                </h2>
-                <p className="text-gray-700 mb-4">{status}</p>
-                <button
-                  onClick={closeModal}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+          <AnimatePresence>
+            {showDialog && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
+              >
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                  }}
+                  className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full"
                 >
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
-
-
-
-
-
-          
+                  <h2 className="text-xl font-bold mb-4 flex items-center">
+                    {status.includes("successfully") ? (
+                      <>
+                        <FaCheckCircle className="text-green-500 mr-2" />
+                        Success!
+                      </>
+                    ) : (
+                      <>
+                        <FaTimesCircle className="text-red-500 mr-2" />
+                        Error
+                      </>
+                    )}
+                  </h2>
+                  <p className="text-gray-700 mb-4">{status}</p>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
