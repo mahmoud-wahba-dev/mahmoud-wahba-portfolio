@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import ProgressBar from 'progressbar.js';
 
 const HeartLoader = ({ onFinish }) => {
@@ -22,7 +22,7 @@ const HeartLoader = ({ onFinish }) => {
         <path
           fillOpacity="0"
           strokeWidth="1"
-          stroke=""
+          stroke="#bbb"
           d="M81.495,13.923c-11.368-5.261-26.234-0.311-31.489,11.032
              C44.74,13.612,29.879,8.657,18.511,13.923  
              C6.402,19.539,0.613,33.883,10.175,50.804
