@@ -8,6 +8,7 @@ export default function WhatsAppButton() {
         href="https://wa.me/201207075722" // Replace with your WhatsApp number
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="WhatsApp"
       >
         {/* WhatsApp Button */}
         <motion.div

@@ -1,4 +1,3 @@
-import React from "react";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,21 +6,30 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
+import HeartLoader from "./components/HeartLoader";
+import { useState } from "react";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="relative">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Education />
-        <Contact />
-        <WhatsAppButton />
-      </main>
-    </div>
+    <>
+      {loading && <HeartLoader onFinish={() => setLoading(false)} />}
+      {!loading && (
+        <div className="relative">
+          <Navigation />
+          <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Experience />
+            <Education />
+            <Contact />
+            <WhatsAppButton />
+          </main>
+        </div>
+      )}
+    </>
   );
 }
 

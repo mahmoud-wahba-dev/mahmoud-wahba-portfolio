@@ -82,6 +82,7 @@ export default function Contact() {
 
             <div className="space-y-4">
               <a
+                aria-label="Email"
                 href="mailto:mahmoud.wahba.dev@gmail.com"
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
               >
@@ -93,6 +94,7 @@ export default function Contact() {
                 href="https://github.com/mahmoud-wahba-dev"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub Profile"
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <LuGithub size={20} className="mr-4" />
@@ -103,6 +105,7 @@ export default function Contact() {
                 href="https://linkedin.com/in/mahmoud--wahba"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <LuLinkedin size={20} className="mr-4" />

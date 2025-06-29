@@ -118,6 +118,7 @@ export default function Projects() {
                   <a
                     href={project.liveUrl}
                     target="_blank"
+                    aria-label="Live Demo"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700"
                   >
@@ -128,6 +129,7 @@ export default function Projects() {
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      aria-label="GitHub"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700"
                     >
