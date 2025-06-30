@@ -1,13 +1,103 @@
 import { LuExternalLink, LuGithub } from "react-icons/lu";
-import nageeb from "../assets/projects/nageeb.png";
-import nafea from "../assets/projects/nafea.png";
-import fatDuster from "../assets/projects/fatduster.png";
-import ecommerce from "../assets/projects/ecommerce_app.png";
-import forsan from "../assets/projects/forsan.png";
-import lavaloon from "../assets/projects/lavaloon.png";
-import tarkiba from "../assets/projects/tarkiba.png";
-import crmLanding from "../assets/projects/crm_landing.png";
+import nageeb from "../assets/projects/nageeb.webp";
+import nafea from "../assets/projects/nafea.webp";
+import fatDuster from "../assets/projects/fatduster.webp";
+import ecommerce from "../assets/projects/ecommerce_app.webp";
+import forsan from "../assets/projects/forsan.webp";
+import lavaloon from "../assets/projects/lavaloon.webp";
+import tarkiba from "../assets/projects/tarkiba.webp";
+import crmLanding from "../assets/projects/crm_landing.webp";
+import qyada from "../assets/projects/qyada.webp";
+import beon from "../assets/projects/beon.webp";
+import lms360 from "../assets/projects/lms360.webp";
+import thevmall from "../assets/projects/thevmall.webp";
+
 const projects = [
+  {
+    title: "Qyada Landing Page & Dashboard",
+    description:
+      "A modern Laravel-powered platform featuring a responsive landing page and a comprehensive dashboard for both admin and employees.",
+    image: qyada, // Replace with the actual image import or path
+    tags: [
+      "Laravel",
+      "HTML/SCSS",
+      "Javascript",
+      "Tailwind CSS	",
+      "Preline UI",
+      "GSAP",
+      "SEO",
+      "Performance",
+      "Accessibility",
+      "Best Practices",
+    ],
+    liveUrl: "https://qyada.io/en",
+  },
+  {
+    title: "Beon Website",
+    description:
+      "A multi-page web platform with a responsive landing page, OTP verification page, and contact form. Built for seamless user interaction and modern aesthetics.",
+    image: beon, // Replace with the actual image import
+    tags: [
+      "Laravel",
+      "HTML/SCSS",
+      "Javascript",
+      "Tailwind CSS",
+      "Daisy Ui",
+      "Splide.js",
+      "SEO",
+      "Performance",
+      "Accessibility",
+      "Best Practices",
+    ],
+    liveUrl: "https://beon.chat/ar/",
+    subPages: [
+      { name: "OTP Verification", url: "https://beon.chat/ar/otp_v2" },
+      { name: "Contact Us", url: "https://beon.chat/ar/contact_us" },
+    ],
+  },
+
+  {
+    title: "360 Business LMS",
+    description:
+      "A learning management system designed for modern enterprises, featuring responsive design, interactive sliders, and optimized performance. Built with Tailwind CSS, Flowbite components, and Splide.js.",
+    image: lms360, // import your screenshot asset
+    tags: [
+      "Laravel",
+      "HTML/SCSS",
+      "Javascript",
+      "Tailwind CSS	",
+      "LMS",
+      "Flowbite",
+      "Splide.js",
+      "SEO",
+      "Performance",
+      "Accessibility",
+      "Best Practices",
+    ],
+    liveUrl: "https://lms.360business-partners.com/ar/home_v2",
+  },
+  {
+    title: "The V Mall",
+    description:
+      "An e-commerce application built with modern frontend technologies, offering a smooth shopping experience with responsive design and interactive sliders.",
+    image: thevmall, // make sure to import the image at the top of your file
+    tags: [
+      "Laravel",
+      "HTML/SCSS",
+      "Javascript",
+      "Tailwind CSS	",
+      "E-commerce",
+      "Flowbite",
+      "Swiper.js",
+      "Splide.js",
+      "Performance",
+      "Accessibility",
+      "Best Practices",
+      "SEO",
+    ],
+    liveUrl: "https://thevmall.net/ar",
+  },
+
   {
     title: "Nageeb App",
     description:
@@ -114,7 +204,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-2">
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -125,6 +215,24 @@ export default function Projects() {
                     <LuExternalLink size={20} className="mr-2" />
                     Live Demo
                   </a>
+
+                  {project.subPages?.length > 0 && (
+                    <div className="flex flex-col gap-1">
+                      {project.subPages.map((subPage, subIndex) => (
+                        <a
+                          key={subIndex}
+                          href={subPage.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-500 hover:text-blue-600 ml-6 flex items-center"
+                        >
+                          <LuExternalLink size={16} className="mr-1" />
+                          {subPage.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
