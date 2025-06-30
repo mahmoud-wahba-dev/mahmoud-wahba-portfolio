@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import logo from "../assets/logo_croped.png";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo_croped.webp";
 import { LuMenu } from "react-icons/lu";
 import { VscChromeClose } from "react-icons/vsc";
 
