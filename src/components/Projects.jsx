@@ -1,5 +1,5 @@
 import { LuExternalLink, LuGithub } from "react-icons/lu";
-import nageeb from "../assets/projects/nageeb.webp";
+import nageeb_img from "../assets/projects/nageeb.webp";
 import nafea from "../assets/projects/nafea.webp";
 import fatDuster from "../assets/projects/fatduster.webp";
 import ecommerce from "../assets/projects/ecommerce_app.webp";
@@ -102,7 +102,7 @@ const projects = [
     title: "Nageeb App",
     description:
       "A Laravel-based application for content management with intuitive navigation and modern tech integration.",
-    image: nageeb,
+    image: nageeb_img,
     tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     liveUrl: "https://nageebapp.com/en",
   },
