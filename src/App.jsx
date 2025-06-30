@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ function App() {
             <Contact />
             <WhatsAppButton />
           </main>
+          <Analytics/>
         </div>
       )}
     </>
