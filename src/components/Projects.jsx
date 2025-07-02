@@ -11,8 +11,36 @@ import qyada from "../assets/projects/qyada.webp";
 import beon from "../assets/projects/beon.webp";
 import lms360 from "../assets/projects/lms360.webp";
 import thevmall from "../assets/projects/thevmall.webp";
+import preline from "../assets/projects/preline.webp";
 
 const projects = [
+  {
+    title: "Preline Admin & Employee Dashboards",
+    description:
+      "A dual-role responsive dashboard built using HTML, Tailwind CSS, and JavaScript. Includes separate views for admin and employee users. Built with Preline UI components, interactive ApexCharts, and NProgress for load indicators.",
+    image: preline,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Preline UI",
+      "ApexCharts",
+      "NProgress",
+      "vercel",
+    ],
+    liveUrl: "https://preline-dashboard-tailwind.vercel.app/",
+    subPages: [
+      {
+        name: "Admin Dashboard",
+        url: "https://preline-dashboard-tailwind.vercel.app/",
+      },
+      {
+        name: "Employee Dashboard",
+        url: "https://preline-dashboard-tailwind.vercel.app/home_employee.html",
+      },
+    ],
+  },
   {
     title: "Qyada Landing Page & Dashboard",
     description:
