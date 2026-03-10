@@ -1,6 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import {
   LuArrowDown,
+  LuDownload,
   LuGithub,
   LuLinkedin,
   LuMail,
@@ -37,7 +38,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex gap-4 animate-fade-in-delay">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in-delay">
             <a
               aria-label="View My Work"
               href="#projects"
@@ -51,6 +52,15 @@ export default function Hero() {
               className="px-8 py-3 border-2 border-white hover:bg-white hover:text-gray-900 rounded-full font-semibold transition-all"
             >
               Contact Me
+            </a>
+            <a
+              href="/src/assets/resume/Front-end-Mahmoud-Wahba-ATS-2026.pdf"
+              download="Mahmoud-Wahba-Resume.pdf"
+              aria-label="Download Resume"
+              className="px-8 py-3 bg-green-500 hover:bg-green-600 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center gap-2"
+            >
+              <LuDownload size={20} />
+              Download Resume
             </a>
           </div>
 

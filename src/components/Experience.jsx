@@ -2,8 +2,25 @@ import { LuCalendar } from "react-icons/lu";
 import lavaloon from "../assets/companies/lavaloon_logo.png";
 import prospera from "../assets/companies/prospera-systems.svg";
 import unlimitedSoftware from "../assets/companies/unlimited-software.png";
+import moatmt from "../assets/companies/moatmt.webp"; // TODO: Replace with actual moatmt logo
 
 const experiences = [
+  {
+    company: "Moatmt",
+    position: "Front-End Developer (Part-Time)",
+    logo: moatmt,
+    period: "Jul 2025 - Mar 2026",
+    description:
+      "Worked as a Frontend Developer building modern landing pages and admin dashboards for company products and client platforms. Collaborated closely with backend developers and UI/UX designers to deliver pixel-perfect, responsive, and high-performance interfaces.",
+    responsibilities: [
+      "Building modern landing pages and admin dashboards for company products",
+      "Collaborating with backend developers and UI/UX designers",
+      "Delivering pixel-perfect, responsive, high-performance interfaces",
+      "Writing clean, reusable, and scalable components",
+      "Ensuring cross-device compatibility and smooth user experience",
+      "Working with Laravel, React,Next js, Tailwind CSS v4, HTML, CSS, JavaScript, and FlyonUI",
+    ],
+  },
   {
     company: "Unlimited Software",
     position: "Front-End Developer",
@@ -78,7 +95,7 @@ export default function Experience() {
 
                 <div className="flex justify-between">
                   <p className="text-gray-600 mb-4">{exp.description}</p>
-                  <div className="w-1/4 h-14">
+                  <div className="w-[42%] h-14">
                     <img
                       src={exp.logo}
                       alt={exp.company}

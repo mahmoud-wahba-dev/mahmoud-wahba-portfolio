@@ -1,5 +1,5 @@
 import { LuCodeXml, LuMonitor, LuPenTool } from "react-icons/lu";
-import { FiLayout } from "react-icons/fi";
+import { FiLayout, FiPackage, FiLayers, FiBox } from "react-icons/fi";
 
 import {
   FaHtml5,
@@ -24,6 +24,9 @@ import {
   SiFrappe,
   SiErpnext,
   SiAdobexd,
+  SiDaisyui,
+  SiVercel,
+  SiLaravel,
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";
@@ -48,14 +51,17 @@ const skills = [
     ],
   },
   {
-    category: "Frameworks",
+    category: "Frameworks & Libraries",
     items: [
       { name: "React.js", icon: <FaReact className="text-blue-400" /> },
-      { name: "Vue.js", icon: <FaVuejs className="text-green-500" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
-      { name: "Frappe", icon: <SiFrappe className="text-blue-600" /> },
-      { name: "ERPNext", icon: <SiErpnext className="text-blue-800" /> },
+      // { name: "Vue.js", icon: <FaVuejs className="text-green-500" /> },
+      { name: "Tailwind css (v3,v4)", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Bootstrap (v4,v5)", icon: <FaBootstrap className="text-purple-500" /> },      { name: "DaisyUI", icon: <SiDaisyui className="text-orange-500" /> },
+      { name: "Flowbite", icon: <FiPackage className="text-blue-600" /> },
+      { name: "Preline", icon: <FiLayers className="text-purple-600" /> },
+      { name: "FlyonUI", icon: <FiBox className="text-indigo-600" /> },      { name: "Laravel", icon: <SiLaravel className="text-red-600" /> },
+      // { name: "Frappe", icon: <SiFrappe className="text-blue-600" /> },
+      // { name: "ERPNext", icon: <SiErpnext className="text-blue-800" /> },
     ],
   },
   {
@@ -68,6 +74,7 @@ const skills = [
 
       { name: "Git", icon: <FaGitAlt className="text-red-500" /> },
       { name: "GitHub", icon: <FaGithub className="text-gray-800" /> },
+      { name: "Vercel", icon: <SiVercel className="text-black" /> },
       { name: "Figma", icon: <FaFigma className="text-purple-600" /> },
       { name: "Adobe XD", icon: <SiAdobexd className="text-pink-500" /> },
       { name: "Linux", icon: <FaLinux className="text-black" /> },
