@@ -16,7 +16,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30"></div>
 
-      <div className="container mx-auto px-6 py-16 pt-24 relative z-10">
+      <div className="container  py-16 pt-24 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">
           <h1 className="text-5xl md:text-7xl font-bold animate-fade-in">
             Hi, I'm <span className="text-blue-400">Mahmoud Wahba</span>

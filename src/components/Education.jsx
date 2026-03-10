@@ -23,7 +23,7 @@ const education = [
 export default function Education() {
   return (
     <section id="education" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+      <div className="container ">
         <h2 className="text-4xl font-bold text-center mb-16">Education</h2>
 
         <div className="max-w-3xl mx-auto space-y-8">

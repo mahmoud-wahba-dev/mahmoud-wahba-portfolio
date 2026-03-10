@@ -1,44 +1,54 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LuExternalLink, LuGithub, LuLayoutTemplate, LuMonitor, LuCode } from "react-icons/lu";
-import nageeb_img from "../assets/projects/nageeb.webp";
-import nafea from "../assets/projects/nafea.webp";
-import fatDuster from "../assets/projects/fatduster.webp";
+import {
+  LuExternalLink,
+  LuGithub,
+  LuLayoutTemplate,
+  LuMonitor,
+  LuCode,
+} from "react-icons/lu";
 import ecommerce from "../assets/projects/ecommerce_app.webp";
 import forsan from "../assets/projects/forsan.webp";
 import lavaloon from "../assets/projects/lavaloon.webp";
 import tarkiba from "../assets/projects/tarkiba.webp";
 import crmLanding from "../assets/projects/crm_landing.webp";
 import qyada from "../assets/projects/qyada.webp";
-import beon from "../assets/projects/beon.webp";
-import lms360 from "../assets/projects/lms360.webp";
 import thevmall from "../assets/projects/thevmall.webp";
 import preline from "../assets/projects/preline.webp";
 
 // Placeholder images for new projects (replace these with actual screenshots later)
-import moatmtBot from "../assets/projects/preline.webp"; // TODO: Replace with actual moatmt-bot.webp
-import moatmtChat from "../assets/projects/preline.webp"; // TODO: Replace with actual moatmt-chat.webp
-import brightScope from "../assets/projects/qyada.webp"; // TODO: Replace with actual bright-scope.webp
-import tailadmin from "../assets/projects/preline.webp"; // TODO: Replace with actual tailadmin.webp
+import moatmtBot from "../assets/projects/moatmt-bot.webp"; // TODO: Replace with actual moatmt-bot.webp
+import moatmtChat from "../assets/projects/moatmt-chat.webp"; // TODO: Replace with actual moatmt-chat.webp
+import tailadmin from "../assets/projects/tailadmin-dashboard.webp"; // TODO: Replace with actual tailadmin.webp
+import notice from "../assets/projects/notice.webp"; // TODO: Replace with actual tailadmin.webp
+import themes from "../assets/projects/themes.webp"; // TODO: Replace with actual tailadmin.webp
+import mahlak from "../assets/projects/mahlak-shein.webp"; // TODO: Replace with actual tailadmin.webp
+import brightScope from "../assets/projects/brightScope.webp"; // TODO: Replace with actual tailadmin.webp
+import ramadan from "../assets/projects/ramadan.webp"; // TODO: Replace with actual tailadmin.webp
+import boto from "../assets/projects/boto.webp"; // TODO: Replace with actual tailadmin.webp
+import connectly from "../assets/projects/connectly.webp"; // TODO: Replace with actual tailadmin.webp
 
 const projects = [
   // ===== FEATURED PROJECTS =====
   {
-    title: "Bright Scope UAE",
+    title: "Bright Scope UAE Website",
     category: "fullstack",
     featured: true,
     description:
-      "Bilingual SPA for UAE cleaning and pest control services with authentication, booking system, and complete admin dashboard. Full-stack solution with Python backend.",
+      "Professional bilingual SPA for Bright Scope UAE, built for cleaning and pest control services with a fast React.js frontend, full Arabic and English RTL/LTR support, authentication, account creation, service booking, REST API integration, and a complete admin dashboard. The platform turns the company website into a real operational system for managing users, services, bookings, and dynamic content with a Python backend.",
     image: brightScope,
     tags: [
       "React.js",
-      "Python",
       "Tailwind CSS",
+      "FlyonUI",
       "REST API",
       "Authentication",
       "Admin Dashboard",
-      "Bilingual",
+      "Multi-language (RTL/LTR)",
       "SPA",
+      "Booking System",
+      "Responsive Design",
+      "CRUD Operations",
     ],
     vercelUrl: "https://bright-scope.vercel.app",
     clientUrl: null,
@@ -69,6 +79,111 @@ const projects = [
   },
 
   // ===== LANDING PAGES =====
+
+  {
+    title: "Moatmt Ramadan Campaign Landing Page",
+    category: "landing",
+    featured: false,
+    description:
+      "Marketing landing page for Moatmt's Ramadan campaign, promoting AI-powered WhatsApp customer-service automation for e-commerce stores. The page highlights Ramadan offers and discount messaging, explains core automation benefits, presents onboarding steps, includes FAQ support, and is built with a conversion-focused structure to help merchants start quickly during the high-demand season.",
+    image: ramadan,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Landing Page",
+      "Ramadan Campaign",
+      "WhatsApp Automation",
+      "AI Customer Support",
+      "Conversion Optimization",
+      "FAQ Section",
+      "Salla",
+      "Zid",
+      "Shopify",
+      "Responsive Design",
+    ],
+    vercelUrl: "https://moatmt-ramadan-landing.vercel.app/",
+    clientUrl: "https://moatmt.sa/ramadan",
+    completionDate: "2025",
+    subPages: [],
+  },
+
+  {
+    title: "Boto WhatsApp Bot Landing Page",
+    category: "landing",
+    featured: false,
+    description:
+      "Landing page for Boto WhatsApp Bot, a service that helps e-commerce stores automate customer communication and support workflows through WhatsApp. The page presents service features, integrations, pricing plans, customer testimonials, FAQ, and clear product sections focused on conversion, while emphasizing AI-powered reply automation, abandoned-cart recovery, order update notifications, and smart customer-service management.",
+    image: boto,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "WhatsApp Bot",
+      "AI Automation",
+      "FAQ Section",
+      "Pricing Plans",
+      "UI/UX",
+      "Responsive Design",
+      "Landing Page",
+    ],
+    vercelUrl: "https://boto-landing-orpin.vercel.app/",
+    clientUrl: null,
+    completionDate: "2025",
+    subPages: [],
+  },
+  {
+    title: "Connectly UGC Creators Platform Landing Page",
+    category: "landing",
+    featured: false,
+    description:
+      "Landing page for Connectly, a platform that connects e-commerce stores with UGC creators to produce high-converting promotional videos for social media. The website clearly presents the platform concept, creator showcase, pricing packages, and order flow, helping store owners understand the service quickly and start with confidence.",
+    image: connectly,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Landing Page",
+      "UGC",
+      "E-commerce",
+      "Pricing Section",
+      "Responsive Design",
+      "UI/UX",
+      "TikTok",
+      "Instagram",
+      "Snapchat",
+    ],
+    vercelUrl: "https://connectly-moatmt.vercel.app/",
+    clientUrl: null,
+    completionDate: "2025",
+    subPages: [],
+  },
+
+  {
+    title: "Saudi Notice Landing Page",
+    category: "landing",
+    featured: false,
+    description:
+      "Professional Saudi landing page for Notes, a smart marketing notification tool built to help e-commerce stores increase engagement and sales through real-time, trustworthy notifications. The page highlights ready-made notification flows, full visual customization, fast setup, detailed analytics, behavior-based targeting, third-party marketing integrations, real customer testimonials, and complete responsiveness across desktop, tablet, and mobile.",
+    image: notice,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Landing Page",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "SEO Optimization",
+    ],
+    vercelUrl: "https://notice-landing-page.vercel.app/",
+    clientUrl: null,
+    completionDate: "Aug 2025",
+    subPages: [],
+  },
   {
     title: "Moatmt Bot Landing Page",
     category: "landing",
@@ -81,13 +196,65 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
+      "FlyonUi",
       "Landing Page",
-      "AI Bot",
-      "WhatsApp",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "SEO Optimization",
     ],
-    vercelUrl: null,
+    vercelUrl: "https://moatmt-bot-landing.vercel.app/",
     clientUrl: "https://moatmt.sa/",
     completionDate: "Oct 2025",
+    subPages: [],
+  },
+
+  {
+    title: "Saudi Moatmt Themes Landing Page",
+    category: "landing",
+    featured: false,
+    description:
+      "Professional Saudi landing page for Moatmt Themes, a collection of ready-made storefront themes designed to customize e-commerce stores with a polished visual style, strong performance, and a smooth user experience. The page showcases premium themes, customer reviews, easy customization and publishing steps, FAQ support, and direct contact channels through WhatsApp and email, with a strong focus on the Saudi market and conversion-driven presentation.",
+    image: themes,
+    tags: [
+      "HTML5",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "SEO Optimization",
+    ],
+    vercelUrl: "https://moatmt-themat.vercel.app/",
+    clientUrl: null,
+    completionDate: "Jun 2025",
+    subPages: [],
+  },
+
+  {
+    title: "Mahalk-Shein Saudi Company Website",
+    category: "landing",
+    featured: false,
+    description:
+      "Corporate website for Mahalk-Shein Saudi Arabia, initially prototyped with Lovable AI in React and then fully converted into a Laravel-compatible implementation while preserving the intended design and user experience. The project included competitor research, responsive layout design, full Arabic and English support with RTL/LTR handling, dark and light modes, and key marketing sections such as home, about, pricing, blog, FAQ, and contact.",
+    image: mahlak,
+    tags: [
+      "Laravel",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Responsive Design",
+      "Dark Mode",
+      "Light Mode",
+      "RTL/LTR",
+      "Lovable AI",
+      "Competitor Analysis",
+    ],
+    vercelUrl: "https://mahalk-shein-landing.vercel.app/",
+    clientUrl: null,
+    completionDate: "Jan 2026",
     subPages: [],
   },
   {
@@ -102,53 +269,41 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "Communication Platform",
-      "SaaS",
+      "FlyonUi",
+      "Landing Page",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "SEO Optimization",
     ],
-    vercelUrl: "https://moatmt-chat.vercel.app",
+    vercelUrl: "https://moatmt-chat-landing.vercel.app/",
     clientUrl: null,
     completionDate: "Oct 2025",
     subPages: [],
   },
-  {
-    title: "Beon Website",
-    category: "landing",
-    featured: false,
-    description:
-      "A multi-page web platform with a responsive landing page, OTP verification page, and contact form. Built for seamless user interaction and modern aesthetics.",
-    image: beon,
-    tags: [
-      "Laravel",
-      "HTML/SCSS",
-      "Javascript",
-      "Tailwind CSS",
-      "Daisy UI",
-      "Splide.js",
-      "SEO",
-    ],
-    vercelUrl: null,
-    clientUrl: "https://beon.chat/ar/",
-    completionDate: "2024",
-    subPages: [
-      { name: "OTP Verification", url: "https://beon.chat/ar/otp_v2" },
-      { name: "Contact Us", url: "https://beon.chat/ar/contact_us" },
-    ],
-  },
-  {
-    title: "CRM V2 Landing",
-    category: "landing",
-    featured: false,
-    description:
-      "Responsive CRM landing page with a clear layout and optimized for mobile and desktop users.",
-    image: crmLanding,
-    tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Landing Page"],
-    vercelUrl: "https://crm-v2-landing-page.vercel.app/",
-    clientUrl: null,
-    completionDate: "2023",
-    subPages: [],
-  },
 
   // ===== DASHBOARDS =====
+
+  {
+    title: "TailAdmin - Professional Dashboard",
+    category: "dashboard",
+    featured: false,
+    description:
+      "Flexible, multi-framework admin dashboard compatible with HTML/CSS/JS, React, and Laravel. Features dark mode, multi-language support, and comprehensive data management.",
+    image: tailadmin,
+    tags: [
+      "React",
+      "Laravel",
+      "Tailwind CSS",
+      "Dashboard",
+      "Dark Mode",
+      "Multi-language (RTL/LTR)",
+      "Admin Panel",
+    ],
+    vercelUrl: "https://tailadmin-dashboard.vercel.app",
+    clientUrl: null,
+    completionDate: "Aug 2025",
+    subPages: [],
+  },
   {
     title: "Preline Admin & Employee Dashboards",
     category: "dashboard",
@@ -170,34 +325,32 @@ const projects = [
     completionDate: "2024",
     subPages: [
       {
-        name: "Admin Dashboard",
-        url: "https://preline-dashboard-tailwind.vercel.app/",
-      },
-      {
         name: "Employee Dashboard",
         url: "https://preline-dashboard-tailwind.vercel.app/home_employee.html",
       },
     ],
   },
+
+  // ============
   {
-    title: "TailAdmin - Professional Dashboard",
-    category: "dashboard",
+    title: "CRM V2 Landing",
+    category: "landing",
     featured: false,
     description:
-      "Flexible, multi-framework admin dashboard compatible with HTML/CSS/JS, React, and Laravel. Features dark mode, multi-language support, and comprehensive data management.",
-    image: tailadmin,
+      "Responsive CRM landing page with a clear layout and optimized for mobile and desktop users.",
+    image: crmLanding,
     tags: [
-      "React",
-      "Laravel",
-      "Tailwind CSS",
-      "Dashboard",
-      "Dark Mode",
-      "Multi-language",
-      "Admin Panel",
+      "HTML/SCSS",
+      "Javascript",
+      "Bootstrap",
+      "Landing Page",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "SEO Optimization",
     ],
-    vercelUrl: "https://tailadmin-dashboard.vercel.app",
+    vercelUrl: "https://crm-v2-landing-page.vercel.app/",
     clientUrl: null,
-    completionDate: "Aug 2025",
+    completionDate: "2024",
     subPages: [],
   },
 
@@ -245,7 +398,6 @@ const projects = [
     subPages: [],
   },
 
-
   {
     title: "Tarkiba",
     category: "fullstack",
@@ -253,27 +405,13 @@ const projects = [
     description:
       "E-commerce platform with modern UI and seamless user experience, optimized for all devices.",
     image: tarkiba,
-    tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap", "E-commerce"],
+    tags: ["Laravel", "HTML/SCSS", "Javascript", "Bootstrap"],
     vercelUrl: null,
     clientUrl: "https://tarkiba.net/en",
-    completionDate: "2023",
+    completionDate: "2024",
     subPages: [],
   },
-  {
-    title: "E-commerce App",
-    category: "fullstack",
-    featured: false,
-    description:
-      "Firebase-powered e-commerce app with real-time updates, user authentication, and a responsive design.",
-    image: ecommerce,
-    tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Node.js", "Firebase"],
-    vercelUrl: null,
-    clientUrl: "https://e-commerce-fc321.firebaseapp.com/index.html",
-    githubUrl:
-      "https://github.com/mahmoud-wahba-dev/fullstack-purejs-shoppingcart-app",
-    completionDate: "2023",
-    subPages: [],
-  },
+
   {
     title: "Lavaloon Company",
     category: "fullstack",
@@ -300,6 +438,22 @@ const projects = [
     completionDate: "2023",
     subPages: [],
   },
+
+  {
+    title: "E-commerce App",
+    category: "fullstack",
+    featured: false,
+    description:
+      "Firebase-powered e-commerce app with real-time updates, user authentication, and a responsive design.",
+    image: ecommerce,
+    tags: ["HTML/SCSS", "Javascript", "Bootstrap", "Node.js", "Firebase"],
+    vercelUrl: "https://e-commerce-fc321.firebaseapp.com/index.html",
+    clientUrl: null,
+    githubUrl:
+      "https://github.com/mahmoud-wahba-dev/fullstack-purejs-shoppingcart-app",
+    completionDate: "2022",
+    subPages: [],
+  },
 ];
 
 const categories = [
@@ -311,18 +465,26 @@ const categories = [
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const shouldShowReadMore = (description) => description.length > 95;
 
   const featuredProjects = projects.filter((p) => p.featured);
   const filteredProjects = projects.filter(
-    (p) => !p.featured && (activeCategory === "all" || p.category === activeCategory)
+    (p) =>
+      !p.featured &&
+      (activeCategory === "all" || p.category === activeCategory),
   );
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-6">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+    >
+      <div className="container">
         <h2 className="text-4xl font-bold text-center mb-4">My Projects</h2>
         <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-          Showcasing modern web applications, landing pages, and dashboards built with cutting-edge technologies
+          Showcasing modern web applications, landing pages, and dashboards
+          built with cutting-edge technologies
         </p>
 
         {/* Featured Projects */}
@@ -330,7 +492,9 @@ export default function Projects() {
           <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500"></div>
-              <h3 className="text-2xl font-bold text-gray-900">Featured Projects</h3>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Featured Projects
+              </h3>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500"></div>
             </div>
 
@@ -361,10 +525,21 @@ export default function Projects() {
                     <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                    <p className="text-gray-600 mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
+                    {shouldShowReadMore(project.description) && (
+                      <button
+                        type="button"
+                        onClick={() => setSelectedProject(project)}
+                        className="text-sm font-semibold text-blue-600 hover:text-blue-700 mb-4"
+                      >
+                        Read full description
+                      </button>
+                    )}
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.slice(0, 6).map((tag, tagIndex) => (
+                      {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full border border-blue-100"
@@ -379,12 +554,12 @@ export default function Projects() {
                         <a
                           href={project.clientUrl}
                           target="_blank"
-                          aria-label="View Production"
+                          aria-label="View Production (Client Domain)"
                           rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
                         >
                           <LuExternalLink size={16} className="mr-2" />
-                          View Production
+                          View Production (Client Domain)
                         </a>
                       )}
                       {project.vercelUrl && (
@@ -471,9 +646,18 @@ export default function Projects() {
                   <p className="text-gray-600 mb-4 text-sm line-clamp-2">
                     {project.description}
                   </p>
+                  {shouldShowReadMore(project.description) && (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(project)}
+                      className="text-sm font-semibold text-blue-600 hover:text-blue-700 mb-4"
+                    >
+                      Read full description
+                    </button>
+                  )}
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                    {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
@@ -488,19 +672,19 @@ export default function Projects() {
                       <a
                         href={project.clientUrl}
                         target="_blank"
-                        aria-label="View Production"
+                        aria-label="View Production (Client Domain)"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                       >
                         <LuExternalLink size={18} className="mr-2" />
-                        View Production
+                        View Production (Client Domain)
                       </a>
                     )}
                     {project.vercelUrl && (
                       <a
                         href={project.vercelUrl}
                         target="_blank"
-                        aria-label="View Demo"
+                        aria-label="View Demo (Vercel)"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-green-600 hover:text-green-700 font-medium"
                       >
@@ -545,9 +729,105 @@ export default function Projects() {
           </motion.div>
         </AnimatePresence>
 
+        <AnimatePresence>
+          {selectedProject && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+              onClick={() => setSelectedProject(null)}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 24, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 24, scale: 0.96 }}
+                transition={{ duration: 0.22 }}
+                onClick={(event) => event.stopPropagation()}
+                className="w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl bg-white shadow-2xl"
+              >
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-start justify-between gap-4 mb-5">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900">
+                        {selectedProject.title}
+                      </h3>
+                      {selectedProject.completionDate && (
+                        <p className="text-sm text-gray-500 mt-1">
+                          Completed: {selectedProject.completionDate}
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(null)}
+                      className="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700"
+                    >
+                      Close
+                    </button>
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    {selectedProject.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {selectedProject.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 text-xs font-medium bg-blue-50 text-blue-700 rounded-full border border-blue-100"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-3">
+                    {selectedProject.clientUrl && (
+                      <a
+                        href={selectedProject.clientUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium"
+                      >
+                        <LuExternalLink size={16} className="mr-2" />
+                        View Production (Client Domain)
+                      </a>
+                    )}
+                    {selectedProject.vercelUrl && (
+                      <a
+                        href={selectedProject.vercelUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
+                      >
+                        <LuExternalLink size={16} className="mr-2" />
+                        View Demo (Vercel)
+                      </a>
+                    )}
+                    {selectedProject.githubUrl && (
+                      <a
+                        href={selectedProject.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-lg font-medium"
+                      >
+                        <LuGithub size={16} className="mr-2" />
+                        GitHub
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No projects found in this category.</p>
+            <p className="text-gray-500 text-lg">
+              No projects found in this category.
+            </p>
           </div>
         )}
       </div>

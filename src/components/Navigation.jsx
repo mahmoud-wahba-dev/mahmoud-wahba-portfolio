@@ -47,7 +47,7 @@ export default function Navigation() {
         isScrolled ? "bg-white shadow-md py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container ">
         <div className="flex items-center justify-between">
           <a href="#home" className="text-2xl font-bold">
             {/* MW */}
