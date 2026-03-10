@@ -49,6 +49,7 @@ const projects = [
       "Booking System",
       "Responsive Design",
       "CRUD Operations",
+      "Vite",
     ],
     vercelUrl: "https://bright-scope.vercel.app",
     clientUrl: null,
@@ -56,25 +57,29 @@ const projects = [
     subPages: [],
   },
   {
-    title: "Qyada Landing Page & Dashboard",
-    category: "fullstack",
+    title: "Connectly UGC Creators Platform Landing Page",
+    category: "landing",
     featured: true,
     description:
-      "A modern Laravel-powered platform featuring a responsive landing page and a comprehensive dashboard for both admin and employees.",
-    image: qyada,
+      "Landing page for Connectly, a platform that connects e-commerce stores with UGC creators to produce high-converting promotional videos for social media. The website clearly presents the platform concept, creator showcase, pricing packages, and order flow, helping store owners understand the service quickly and start with confidence.",
+    image: connectly,
     tags: [
-      "Laravel",
-      "HTML/SCSS",
-      "Javascript",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Tailwind CSS",
-      "Preline UI",
+      "FlyonUI",
       "GSAP",
-      "SEO",
-      "Performance",
+      "AOS Aninmation",
+      "Figma to Code",
+      "Pixel-Perfect Design",
+      "Responsive Design",
+      "SEO Optimization",
+      "Vite",
     ],
-    vercelUrl: null,
-    clientUrl: "https://qyada.io/en",
-    completionDate: "2024",
+    vercelUrl: "https://connectly-moatmt.vercel.app/",
+    clientUrl: null,
+    completionDate: "2025",
     subPages: [],
   },
 
@@ -92,16 +97,14 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "Landing Page",
-      "Ramadan Campaign",
-      "WhatsApp Automation",
-      "AI Customer Support",
-      "Conversion Optimization",
-      "FAQ Section",
-      "Salla",
-      "Zid",
-      "Shopify",
+      "FlyonUI",
+      "AOS Aninmation",
+      "GSAP",
+      "Figma to Code",
+      "Pixel-Perfect Design",
       "Responsive Design",
+      "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://moatmt-ramadan-landing.vercel.app/",
     clientUrl: "https://moatmt.sa/ramadan",
@@ -121,42 +124,16 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "WhatsApp Bot",
-      "AI Automation",
-      "FAQ Section",
-      "Pricing Plans",
-      "UI/UX",
+      "FlyonUI",
+      "AOS Aninmation",
+      "GSAP",
+      "Figma to Code",
+      "Pixel-Perfect Design",
       "Responsive Design",
-      "Landing Page",
+      "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://boto-landing-orpin.vercel.app/",
-    clientUrl: null,
-    completionDate: "2025",
-    subPages: [],
-  },
-  {
-    title: "Connectly UGC Creators Platform Landing Page",
-    category: "landing",
-    featured: false,
-    description:
-      "Landing page for Connectly, a platform that connects e-commerce stores with UGC creators to produce high-converting promotional videos for social media. The website clearly presents the platform concept, creator showcase, pricing packages, and order flow, helping store owners understand the service quickly and start with confidence.",
-    image: connectly,
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind CSS",
-      "Landing Page",
-      "UGC",
-      "E-commerce",
-      "Pricing Section",
-      "Responsive Design",
-      "UI/UX",
-      "TikTok",
-      "Instagram",
-      "Snapchat",
-    ],
-    vercelUrl: "https://connectly-moatmt.vercel.app/",
     clientUrl: null,
     completionDate: "2025",
     subPages: [],
@@ -174,10 +151,12 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "Landing Page",
+      "FlyonUI",
       "Figma to Code",
       "Pixel-Perfect Design",
+      "Responsive Design",
       "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://notice-landing-page.vercel.app/",
     clientUrl: null,
@@ -196,11 +175,12 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "FlyonUi",
-      "Landing Page",
+      "Daisy UI",
       "Figma to Code",
       "Pixel-Perfect Design",
+      "Responsive Design",
       "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://moatmt-bot-landing.vercel.app/",
     clientUrl: "https://moatmt.sa/",
@@ -220,10 +200,12 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
+      "FlyonUI",
       "Responsive Design",
       "Figma to Code",
       "Pixel-Perfect Design",
       "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://moatmt-themat.vercel.app/",
     clientUrl: null,
@@ -232,7 +214,7 @@ const projects = [
   },
 
   {
-    title: "Mahalk-Shein Saudi Company Website",
+    title: "Mahalk-Shein Saudi Landing Page",
     category: "landing",
     featured: false,
     description:
@@ -245,12 +227,14 @@ const projects = [
       "JavaScript",
       "HTML",
       "CSS",
+      "shadcn/ui",
       "Responsive Design",
       "Dark Mode",
       "Light Mode",
       "RTL/LTR",
       "Lovable AI",
       "Competitor Analysis",
+      "Vite",
     ],
     vercelUrl: "https://mahalk-shein-landing.vercel.app/",
     clientUrl: null,
@@ -269,11 +253,13 @@ const projects = [
       "CSS",
       "JavaScript",
       "Tailwind CSS",
-      "FlyonUi",
-      "Landing Page",
+      "Daisy Ui",
+      "Next js",
       "Figma to Code",
       "Pixel-Perfect Design",
+      "Responsive Design",
       "SEO Optimization",
+      "Vite",
     ],
     vercelUrl: "https://moatmt-chat-landing.vercel.app/",
     clientUrl: null,
@@ -294,10 +280,10 @@ const projects = [
       "React",
       "Laravel",
       "Tailwind CSS",
-      "Dashboard",
       "Dark Mode",
       "Multi-language (RTL/LTR)",
       "Admin Panel",
+      "Vite",
     ],
     vercelUrl: "https://tailadmin-dashboard.vercel.app",
     clientUrl: null,
@@ -319,6 +305,7 @@ const projects = [
       "Preline UI",
       "ApexCharts",
       "Dashboard",
+      "Vite",
     ],
     vercelUrl: "https://preline-dashboard-tailwind.vercel.app/",
     clientUrl: null,
@@ -343,7 +330,6 @@ const projects = [
       "HTML/SCSS",
       "Javascript",
       "Bootstrap",
-      "Landing Page",
       "Figma to Code",
       "Pixel-Perfect Design",
       "SEO Optimization",
@@ -478,27 +464,29 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden"
     >
       <div className="container">
-        <h2 className="text-4xl font-bold text-center mb-4">My Projects</h2>
-        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-3 sm:mb-4">
+          My Projects
+        </h2>
+        <p className="text-center text-sm sm:text-base text-gray-600 mb-10 sm:mb-16 max-w-2xl mx-auto">
           Showcasing modern web applications, landing pages, and dashboards
           built with cutting-edge technologies
         </p>
 
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
-          <div className="mb-16">
+          <div className="mb-12 sm:mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-500"></div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Featured Projects
               </h3>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-500"></div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
               {featuredProjects.map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -521,11 +509,11 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                  <div className="p-5 sm:p-6">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-2">
                       {project.description}
                     </p>
                     {shouldShowReadMore(project.description) && (
@@ -538,11 +526,11 @@ export default function Projects() {
                       </button>
                     )}
 
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full border border-blue-100"
+                          className="px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-medium bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full border border-blue-100"
                         >
                           {tag}
                         </span>
@@ -556,7 +544,7 @@ export default function Projects() {
                           target="_blank"
                           aria-label="View Production (Client Domain)"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
+                          className="inline-flex items-center px-3 sm:px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
                         >
                           <LuExternalLink size={16} className="mr-2" />
                           View Production (Client Domain)
@@ -568,7 +556,7 @@ export default function Projects() {
                           target="_blank"
                           aria-label="View Demo"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
+                          className="inline-flex items-center px-3 sm:px-4 py-2 text-sm bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all transform hover:scale-105"
                         >
                           <LuExternalLink size={16} className="mr-2" />
                           View Demo
@@ -583,25 +571,27 @@ export default function Projects() {
         )}
 
         {/* Category Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white rounded-xl shadow-md p-1.5 gap-1">
-            {categories.map((cat) => {
-              const Icon = cat.icon;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    activeCategory === cat.id
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  <Icon size={18} className="mr-2" />
-                  {cat.label}
-                </button>
-              );
-            })}
+        <div className="mb-12 lg:flex lg:justify-center">
+          <div className="mx-auto lg:mx-0 max-w-full overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            <div className="inline-flex min-w-max bg-white rounded-xl shadow-md p-1.5 gap-1">
+              {categories.map((cat) => {
+                const Icon = cat.icon;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`inline-flex shrink-0 items-center whitespace-nowrap px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
+                      activeCategory === cat.id
+                        ? "bg-blue-600 text-white shadow-md"
+                        : "text-gray-600 hover:bg-gray-100"
+                    }`}
+                  >
+                    <Icon size={18} className="mr-2" />
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -613,7 +603,7 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -639,11 +629,11 @@ export default function Projects() {
                   )}
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-sm line-clamp-2">
+                  <p className="text-gray-600 mb-3 sm:mb-4 text-sm line-clamp-2">
                     {project.description}
                   </p>
                   {shouldShowReadMore(project.description) && (
@@ -656,11 +646,11 @@ export default function Projects() {
                     </button>
                   )}
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full"
+                        className="px-2 py-0.5 sm:py-1 text-[11px] sm:text-xs bg-gray-100 text-gray-700 rounded-full"
                       >
                         {tag}
                       </span>

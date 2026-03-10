@@ -27,12 +27,16 @@ const experiences = [
     logo: unlimitedSoftware,
     period: "Jul 2024 - Present",
     description:
-      "Leading front-end development initiatives and implementing modern web solutions.",
+      "Building and refactoring frontend websites, landing pages, and reusable components using Laravel, Vue.js, HTML, CSS, JavaScript, Tailwind CSS, and the Vue ecosystem, while integrating APIs and collaborating closely with UI/UX, testing, and business teams to deliver stable, user-focused products.",
     responsibilities: [
-      "Translation of UI/UX design wireframes to actual code",
-      "Working with UI/UX designers to bridge design and implementation",
-      "Ensuring responsiveness of applications",
-      "Maintaining and developing frontend features",
+      "Building landing pages with Laravel, HTML, CSS, JavaScript, and Tailwind CSS",
+      "Building and refactoring websites and frontend components with Laravel, Vue.js, Tailwind CSS, and PrimeVue",
+      "Integrating APIs and handling frontend data flow across product features",
+      "Using the Vue ecosystem effectively, including Pinia for state management",
+      "Collaborating with UI/UX designers to turn design decisions into clean, maintainable interfaces",
+      "Working with testing and business teams to improve product quality and align implementation with requirements",
+      "Fixing bugs, improving performance, and keeping the codebase reusable and scalable",
+      "Ensuring responsive behavior and consistent user experience across devices",
     ],
   },
   {

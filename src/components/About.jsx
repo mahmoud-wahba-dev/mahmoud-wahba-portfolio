@@ -106,7 +106,7 @@ export default function About() {
       <div className="container ">
         <h2 className="text-4xl font-bold text-center mb-16">About Me</h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 ">
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
               A Junior Developer with 2+ years of experience, specializing in
