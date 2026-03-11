@@ -108,7 +108,7 @@ const projects = [
     ],
     vercelUrl: "https://moatmt-ramadan-landing.vercel.app/",
     clientUrl: "https://moatmt.sa/ramadan",
-    completionDate: "2025",
+    completionDate: "2026",
     subPages: [],
   },
 
@@ -135,7 +135,7 @@ const projects = [
     ],
     vercelUrl: "https://boto-landing-orpin.vercel.app/",
     clientUrl: null,
-    completionDate: "2025",
+    completionDate: "2026",
     subPages: [],
   },
 
