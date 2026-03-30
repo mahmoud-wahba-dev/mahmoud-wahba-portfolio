@@ -54,7 +54,7 @@ export default function Hero() {
               Contact Me
             </a>
             <a
-              href="/src/assets/resume/Front-end-Mahmoud-Wahba-ATS-2026.pdf"
+              href="/src/assets/resume/Mahmoud_Wahba_CV_front_end_2026.pdf"
               download="Mahmoud-Wahba-Resume.pdf"
               aria-label="Download Resume"
               className="px-8 py-3 bg-green-500 hover:bg-green-600 rounded-full font-semibold transition-all transform hover:scale-105 flex items-center gap-2"
