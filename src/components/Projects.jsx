@@ -15,6 +15,7 @@ import crmLanding from "../assets/projects/crm_landing.webp";
 import qyada from "../assets/projects/qyada.webp";
 import thevmall from "../assets/projects/thevmall.webp";
 import preline from "../assets/projects/preline.webp";
+import qiecTraining from "../assets/projects/qiec-training.webp";
 
 // Placeholder images for new projects (replace these with actual screenshots later)
 import moatmtBot from "../assets/projects/moatmt-bot.webp"; // TODO: Replace with actual moatmt-bot.webp
@@ -30,6 +31,31 @@ import connectly from "../assets/projects/connectly.webp"; // TODO: Replace with
 
 const projects = [
   // ===== FEATURED PROJECTS =====
+  {
+    title: "QIEC Training Center LMS (KSA)",
+    category: "fullstack",
+    featured: true,
+    description:
+      "A role-based learning management system for the Quality and Excellence Center, supporting students, instructors, and administrators through dedicated screens and workflows. I refactored the platform and delivered responsive, reusable interfaces while working across the Laravel and PHP stack.",
+    image: qiecTraining,
+    tags: [
+      "Laravel",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub",
+      "LMS",
+      "Role-Based Access",
+      "Web Application",
+      "Saudi Company (KSA)",
+      "Responsive Design",
+    ],
+    vercelUrl: null,
+    clientUrl: "https://training.qiec.sa/",
+    completionDate: "2026",
+    subPages: [],
+  },
   {
     title: "Bright Scope UAE Website",
     category: "fullstack",
@@ -48,6 +74,7 @@ const projects = [
       "Admin Dashboard",
       "CRUD Operations",
       "SPA",
+      "Web Application",
       "Multi-language (RTL/LTR)",
       "Responsive Design",
     ],
@@ -457,8 +484,9 @@ export default function Projects() {
   const featuredProjects = projects.filter((p) => p.featured);
   const filteredProjects = projects.filter(
     (p) =>
-      !p.featured &&
-      (activeCategory === "all" || p.category === activeCategory),
+      activeCategory === "all"
+        ? !p.featured
+        : p.category === activeCategory,
   );
 
   return (

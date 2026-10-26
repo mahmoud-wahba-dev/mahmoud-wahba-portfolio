@@ -3,10 +3,26 @@ import lavaloon from "../assets/companies/lavaloon_logo.png";
 import prospera from "../assets/companies/prospera-systems.svg";
 import unlimitedSoftware from "../assets/companies/unlimited-software.png";
 import moatmt from "../assets/companies/moatmt.webp"; // TODO: Replace with actual moatmt logo
+import qiec from "../assets/companies/qiec.png";
 
 const experiences = [
   {
-    company: "Moatmt",
+    company: "QIEC (KSA)",
+    position: "Full-Stack Developer (Part-Time)",
+    logo: qiec,
+    period: "2026 - Present",
+    description:
+      "Worked part-time with the Quality and Excellence Center to modernize its portfolio websites and refactor the learning management system that serves students, instructors, and administrators.",
+    responsibilities: [
+      "Refactoring legacy portfolio websites and moving them to new Hostinger hosting environments",
+      "Refactoring the LMS platform and its role-based screens for students, instructors, and administrators",
+      "Converting 150 Figma screens into responsive, reusable interfaces",
+      "Building full-stack features with Laravel, PHP, HTML, CSS, and JavaScript",
+      "Using GitHub for source control and coordinating reliable deployments",
+    ],
+  },
+  {
+    company: "Moatmt (KSA)",
     position: "Front-End Developer (Part-Time)",
     logo: moatmt,
     period: "Jul 2025 - Mar 2026",
