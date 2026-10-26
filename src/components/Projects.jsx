@@ -16,6 +16,7 @@ import qyada from "../assets/projects/qyada.webp";
 import thevmall from "../assets/projects/thevmall.webp";
 import preline from "../assets/projects/preline.webp";
 import qiecTraining from "../assets/projects/qiec-training.webp";
+import siematplus from "../assets/projects/siematplus.webp";
 
 // Placeholder images for new projects (replace these with actual screenshots later)
 import moatmtBot from "../assets/projects/moatmt-bot.webp"; // TODO: Replace with actual moatmt-bot.webp
@@ -55,6 +56,37 @@ const projects = [
     clientUrl: "https://training.qiec.sa/",
     completionDate: "2026",
     subPages: [],
+  },
+  {
+    title: "Siematplus (KSA)",
+    category: "landing",
+    featured: false,
+    description:
+      "Refactored the Rocket LMS learning management system theme by replacing its outdated landing and authentication experiences with a new Figma-driven visual identity. I rebuilt the interfaces with Tailwind CSS, FlyonUI, and DaisyUI, then handled CI/CD and production deployment for the live platform.",
+    image: siematplus,
+    tags: [
+      "PHP 8",
+      "MySQL",
+      "Tailwind CSS",
+      "FlyonUI",
+      "Bootstrap to Tailwind",
+      "Figma to Code",
+      "UI/UX Refactor",
+      "Landing Pages",
+      "Authentication UI",
+      "CI/CD",
+      "Production Deployment",
+      "Responsive Design",
+    ],
+    vercelUrl: null,
+    clientUrl: "https://www.siematplus.com/",
+    completionDate: "2026",
+    subPages: [
+      {
+        name: "Original Rocket LMS Theme",
+        url: "https://codecanyon.net/item/rocket-lms-learning-management-academy-script/33120735?s_rank=1",
+      },
+    ],
   },
   {
     title: "Bright Scope UAE Website",
@@ -590,6 +622,18 @@ export default function Projects() {
                           View Demo
                         </a>
                       )}
+                      {project.subPages?.map((subPage, subIndex) => (
+                        <a
+                          key={subIndex}
+                          href={subPage.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-3 sm:px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-all"
+                        >
+                          <LuExternalLink size={16} className="mr-2" />
+                          {subPage.name}
+                        </a>
+                      ))}
                     </div>
                   </div>
                 </motion.div>

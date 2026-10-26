@@ -7,7 +7,7 @@ import qiec from "../assets/companies/qiec.png";
 
 const experiences = [
   {
-    company: "QIEC (KSA)",
+    company: "QIEC (KSA) مركز الجوده والتميز للتدريب",
     position: "Full-Stack Developer (Part-Time)",
     logo: qiec,
     period: "2026 - Present",
